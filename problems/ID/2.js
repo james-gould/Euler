@@ -3,12 +3,21 @@
 const Title = 'Even Fibonacci numbers';
 
 function Solve() {
-  let nextNum, evenNumAddition = 0;
-  let previousNum = 1; // Starting number
-  
-  while(nextNum < 4000000) {
+  let previousFirst = 1, previousSecond = 1, sumOfPrevious = 0, evenValuedAdditions = 0;
+  console.log(previousFirst, previousSecond, sumOfPrevious, evenValuedAdditions);
 
+  while(sumOfPrevious < 4000000) {
+    sumOfPrevious = previousFirst + previousSecond;
+
+    previousFirst = previousSecond;
+    previousSecond = sumOfPrevious;
+
+    if(sumOfPrevious % 2 === 0) {
+      evenValuedAdditions += sumOfPrevious
+    }
   }
+
+  console.log('Solution: ' + evenValuedAdditions);
 }
 
 module.exports = {

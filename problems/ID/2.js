@@ -4,7 +4,6 @@ const Title = 'Even Fibonacci numbers';
 
 function Solve() {
   let previousFirst = 1, previousSecond = 1, sumOfPrevious = 0, evenValuedAdditions = 0;
-  console.log(previousFirst, previousSecond, sumOfPrevious, evenValuedAdditions);
 
   while(sumOfPrevious < 4000000) {
     sumOfPrevious = previousFirst + previousSecond;
